@@ -17,7 +17,17 @@ import java.io.IOException;
 public class MainFormController {
     public AnchorPane rootNode;
 
-    public void btnCustomerOnAction(ActionEvent actionEvent) {
+    public void btnCustomerOnAction(ActionEvent actionEvent) throws IOException {
+        Parent rootNode = FXMLLoader.load(this.getClass().getResource("/view/customer_form.fxml"));
+
+        Scene scene = new Scene(rootNode);
+
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.setTitle("Customer Form");
+
+        stage.show();
+
     }
 
     public void btnItemOnAction(ActionEvent actionEvent) {
