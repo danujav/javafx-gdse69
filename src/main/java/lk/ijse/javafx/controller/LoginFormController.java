@@ -30,13 +30,19 @@ public class LoginFormController {
             //load scene graph to our java method
             AnchorPane rootNode = FXMLLoader.load(this.getClass().getResource("/view/main_form.fxml"));
 
+            //set a scene to the scene graph
             Scene scene = new Scene(rootNode);
 
             // get the primary stage from login actors
             Stage stage = (Stage) this.rootNode.getScene().getWindow();
+
+            // set scene to the primary stage
             stage.setScene(scene);
 
+            // set title to the stage
             stage.setTitle("Main Form");
+
+            // get stage to the center
             stage.centerOnScreen();
         } else {
             new Alert(Alert.AlertType.ERROR, "Login Failed").show();
