@@ -1,24 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
+<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-
 
 <AnchorPane prefHeight="272.0" prefWidth="369.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.javafx.controller.SampleFormController">
    <children>
       <TextField layoutX="37.0" layoutY="122.0" prefHeight="57.0" prefWidth="296.0" />
-      <Button layoutX="148.0" layoutY="202.0" mnemonicParsing="false" text="Click">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Button>
       <Label layoutX="74.0" layoutY="25.0" text="Main window" textFill="#216a9e">
          <font>
             <Font name="System Bold Italic" size="30.0" />
          </font>
       </Label>
+      <JFXButton buttonType="RAISED" layoutX="265.0" layoutY="207.0" style="-fx-background-color: lightblue;" text="Click">
+         <graphic>
+            <ImageView fitHeight="36.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/click.png" />
+               </image>
+            </ImageView>
+         </graphic></JFXButton>
    </children>
 </AnchorPane>

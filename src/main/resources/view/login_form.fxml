@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="357.0" prefWidth="344.0" style="-fx-background-color: #0000;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.javafx.controller.LoginFormController">
+    <children>
+        <Label layoutX="112.0" layoutY="26.0" text="Login Form" textFill="#636e72">
+            <font>
+                <Font name="System Bold" size="19.0" />
+            </font>
+        </Label>
+        <TextField layoutX="35.0" layoutY="99.0" prefHeight="41.0" prefWidth="277.0" promptText="user name" />
+        <TextField layoutX="35.0" layoutY="175.0" prefHeight="41.0" prefWidth="277.0" promptText="password" />
+        <JFXButton buttonType="RAISED" layoutX="34.0" layoutY="247.0" prefHeight="32.0" prefWidth="277.0" style="-fx-background-color: #a29bfe;" text="Login">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+         <graphic>
+            <ImageView fitHeight="105.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/login.png" />
+               </image>
+            </ImageView>
+         </graphic>
+        </JFXButton>
+        <Label layoutX="40.0" layoutY="293.0" text="Don't have an account?" textFill="#636e72" />
+        <Hyperlink layoutX="197.0" layoutY="290.0" text="Sign up here" />
+        <Line endX="124.0" layoutX="125.0" layoutY="55.0" startX="-31.0" stroke="#636e72" />
+    </children>
+</AnchorPane>
