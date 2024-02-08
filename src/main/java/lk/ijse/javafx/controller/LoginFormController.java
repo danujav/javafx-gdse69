@@ -6,7 +6,9 @@ package lk.ijse.javafx.controller;
 */
 
 import javafx.event.ActionEvent;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
+import lk.ijse.javafx.db.CredentialDB;
 
 public class LoginFormController {
     public TextField txtUserName;
@@ -16,7 +18,10 @@ public class LoginFormController {
         String userName = txtUserName.getText();
         String pw = txtPassword.getText();
 
-        System.out.println(userName);
-        System.out.println(pw);
+        if(userName.equals(CredentialDB.USER_NAME) && pw.equals(CredentialDB.PW)) {
+            new Alert(Alert.AlertType.CONFIRMATION, "Login Successful").show();
+        } else {
+            new Alert(Alert.AlertType.ERROR, "Login Failed").show();
+        }
     }
 }
