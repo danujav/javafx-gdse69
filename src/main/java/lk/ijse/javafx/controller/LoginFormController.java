@@ -19,6 +19,7 @@ import java.io.IOException;
 public class LoginFormController {
     public TextField txtUserName;
     public TextField txtPassword;
+    public AnchorPane rootNode;
 
     public void btnLoginOnAction(ActionEvent actionEvent) throws IOException {
         String userName = txtUserName.getText();
@@ -27,17 +28,16 @@ public class LoginFormController {
         if(userName.equals(CredentialDB.USER_NAME) && pw.equals(CredentialDB.PW)) {
             // navigate to the sample form
             //load scene graph to our java method
-            AnchorPane rootNode = FXMLLoader.load(this.getClass().getResource("/view/sample_form.fxml"));
+            AnchorPane rootNode = FXMLLoader.load(this.getClass().getResource("/view/main_form.fxml"));
 
             Scene scene = new Scene(rootNode);
 
-            Stage stage = new Stage();
+            // get the primary stage from login actors
+            Stage stage = (Stage) this.rootNode.getScene().getWindow();
             stage.setScene(scene);
 
-            stage.setTitle("Sample Form");
-
-            stage.show();
-
+            stage.setTitle("Main Form");
+            stage.centerOnScreen();
         } else {
             new Alert(Alert.AlertType.ERROR, "Login Failed").show();
         }
