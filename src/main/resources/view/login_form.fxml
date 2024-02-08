@@ -18,9 +18,9 @@
                 <Font name="System Bold" size="19.0" />
             </font>
         </Label>
-        <TextField layoutX="35.0" layoutY="99.0" prefHeight="41.0" prefWidth="277.0" promptText="user name" />
-        <TextField layoutX="35.0" layoutY="175.0" prefHeight="41.0" prefWidth="277.0" promptText="password" />
-        <JFXButton buttonType="RAISED" layoutX="34.0" layoutY="247.0" prefHeight="32.0" prefWidth="277.0" style="-fx-background-color: #a29bfe;" text="Login">
+        <TextField fx:id="txtUserName" layoutX="35.0" layoutY="99.0" prefHeight="41.0" prefWidth="277.0" promptText="user name" />
+        <TextField fx:id="txtPassword" layoutX="35.0" layoutY="175.0" prefHeight="41.0" prefWidth="277.0" promptText="password" />
+        <JFXButton buttonType="RAISED" layoutX="34.0" layoutY="247.0" onAction="#btnLoginOnAction" prefHeight="32.0" prefWidth="277.0" style="-fx-background-color: #a29bfe;" text="Login">
             <font>
                 <Font name="System Bold" size="14.0" />
             </font>
