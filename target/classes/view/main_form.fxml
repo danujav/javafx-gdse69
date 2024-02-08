@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="472.0" prefWidth="702.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.javafx.controller.MainFormController">
+<AnchorPane fx:id="rootNode" prefHeight="472.0" prefWidth="702.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.javafx.controller.MainFormController">
     <children>
         <Label layoutX="253.0" layoutY="14.0" prefHeight="40.0" prefWidth="211.0" text="Main Form">
             <font>
